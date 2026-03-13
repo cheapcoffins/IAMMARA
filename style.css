@@ -364,6 +364,24 @@ a {
   object-fit: cover;
 }
 
+.performance-image {
+  margin: 0 0 clamp(12px, 2vw, 16px);
+  padding: 0;
+  overflow: hidden;
+}
+
+.performance-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.photo-credit {
+  padding: 10px 14px 12px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
 .contact-card p {
   margin: 6px 0;
   overflow-wrap: anywhere;
