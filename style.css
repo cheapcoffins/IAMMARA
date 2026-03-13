@@ -1,0 +1,327 @@
+/*
+  Cheap Coffins — I AM MARA
+  Private one-page EPK stylesheet
+  Dark, editorial, minimal design system.
+*/
+
+:root {
+  --bg: #0d0d0f;
+  --panel: #141418;
+  --panel-2: #1b1b21;
+  --text: #e8e8ee;
+  --muted: #ababba;
+  --line: #2a2a33;
+  --accent: #c9c9d8;
+  --max-width: 1100px;
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Password Gate */
+.password-gate {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: radial-gradient(circle at center, #17171c 0%, #0b0b0d 60%, #09090b 100%);
+}
+
+.gate-card {
+  width: min(560px, 100%);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 30px;
+}
+
+.gate-card h1 {
+  margin: 0 0 12px;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  line-height: 1.25;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.gate-form {
+  margin-top: 20px;
+  display: grid;
+  gap: 10px;
+}
+
+.gate-form input,
+.gate-form button {
+  min-height: 44px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--panel-2);
+  color: var(--text);
+  padding: 0 12px;
+  font-size: 1rem;
+}
+
+.gate-form button {
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.gate-form button:hover,
+.gate-form button:focus-visible {
+  background: #24242d;
+  border-color: #3a3a48;
+}
+
+.gate-message {
+  margin: 0;
+  min-height: 20px;
+  color: #ff8a8a;
+}
+
+/* Main layout */
+.site-content {
+  padding: 36px 20px 80px;
+}
+
+.section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 24px 0;
+}
+
+.section + .section {
+  border-top: 1px solid var(--line);
+}
+
+.section-heading {
+  margin-bottom: 18px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: clamp(1.35rem, 2.2vw, 1.9rem);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.hero-copy h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.7rem);
+  line-height: 1.05;
+}
+
+.lead {
+  max-width: 60ch;
+  color: #d3d3dd;
+}
+
+.private-note {
+  margin-top: 14px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.cover-wrap {
+  margin: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  aspect-ratio: 1 / 1;
+}
+
+.cover-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overview-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+  padding: 18px;
+}
+
+.overview-grid .card:nth-child(1),
+.overview-grid .card:nth-child(2),
+.overview-grid .card:nth-child(3) {
+  grid-column: span 4;
+}
+
+.meta-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.meta-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.meta-list li:last-child {
+  border-bottom: 0;
+}
+
+.track-list {
+  display: grid;
+  gap: 12px;
+}
+
+.track {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+  padding: 14px;
+}
+
+.track-header {
+  display: grid;
+  grid-template-columns: 50px 1fr auto;
+  grid-template-areas:
+    "number title duration"
+    "number note duration";
+  column-gap: 12px;
+  row-gap: 3px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.track-number {
+  grid-area: number;
+  margin: 0;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.track h3 {
+  grid-area: title;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.track-note {
+  grid-area: note;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.track-duration {
+  grid-area: duration;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.track audio {
+  width: 100%;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.video-frame {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--panel);
+  aspect-ratio: 16 / 9;
+}
+
+.video-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.prose p {
+  margin: 0 0 12px;
+}
+
+.prose p:last-child {
+  margin-bottom: 0;
+}
+
+.contact-card p {
+  margin: 6px 0;
+}
+
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .overview-grid .card {
+    grid-column: span 12 !important;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .track-header {
+    grid-template-columns: 44px 1fr;
+    grid-template-areas:
+      "number title"
+      "number note"
+      "duration duration";
+  }
+
+  .track-duration {
+    margin-top: 4px;
+  }
+}
