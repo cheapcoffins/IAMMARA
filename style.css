@@ -137,6 +137,22 @@ a {
   font-size: clamp(1.35rem, 2.2vw, 1.9rem);
 }
 
+.stream-note {
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+.soundcloud-wrap {
+  padding: 0;
+  overflow: hidden;
+}
+
+.soundcloud-wrap iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
 .hero-grid {
   display: grid;
   grid-template-columns: 1.25fr 1fr;

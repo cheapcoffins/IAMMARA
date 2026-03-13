@@ -35,11 +35,13 @@ Open `index.html` and update the clearly labeled comment blocks:
 1. Put your final artwork in `images/`
 2. Use `images/cover.jpg` (or update the image path in `index.html`)
 
-## Replace MP3 Files
+## Replace Private Stream Source (SoundCloud)
 
-1. Place your audio files in `audio/`
-2. Replace the placeholder files/paths:
-   - `audio/track01.mp3` ... `audio/track09.mp3`
+The private stream now uses an embedded SoundCloud playlist.
+
+1. Open `index.html`.
+2. In the **Private Stream** section, update the SoundCloud playlist URL in the iframe `src` query param (`url=`).
+3. Keep the URL encoded format used in the existing embed.
 
 ## Replace YouTube Links
 
