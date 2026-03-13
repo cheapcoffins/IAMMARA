@@ -304,6 +304,10 @@ a {
   gap: clamp(12px, 2vw, 16px);
 }
 
+#video .card.prose {
+  margin-bottom: clamp(12px, 2vw, 16px);
+}
+
 .video-frame {
   border: 1px solid var(--line);
   border-radius: var(--radius);
