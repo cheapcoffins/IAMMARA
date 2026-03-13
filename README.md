@@ -1,58 +1,18 @@
-# Cheap Coffins — I AM MARA (Private EPK)
+# Cheap Coffins — I AM MARA (Reset Baseline)
 
-Static one-page private EPK site for sharing an advance stream with labels, media, promoters, and industry contacts.
+This repository has been reset to a minimal clean baseline to avoid merge conflicts from prior iterations.
 
-## Folder Structure
+## Files
+- `index.html` — minimal one-page private EPK layout with SoundCloud embed
+- `style.css` — dark baseline styling
+- `script.js` — password gate + sessionStorage behavior
+- `images/` — image asset folder
+- `audio/` — optional audio folder
 
-- `index.html` — page layout and editable content sections
-- `style.css` — visual styling (dark editorial theme)
-- `script.js` — password gate logic + one-track-at-a-time audio playback
-- `images/` — cover artwork and other image assets
-- `audio/` — album MP3 files
+## Quick edits
+- Password: `script.js` (`EPK_PASSWORD`)
+- SoundCloud playlist URL: `index.html` iframe `src`
+- Contact text and headings: `index.html`
 
-## Where to Change the Password
-
-Open `script.js` and update:
-
-- `const EPK_PASSWORD = "cheapcoffins-private";`
-
-This is a client-side gate for casual protection only.
-
-## Where to Change Text Content
-
-Open `index.html` and update the clearly labeled comment blocks:
-
-- band name
-- album title
-- album blurb
-- overview metadata
-- track titles
-- track notes
-- contact information
-
-## Replace the Cover Image
-
-1. Put your final artwork in `images/`
-2. Use `images/cover.jpg` (or update the image path in `index.html`)
-
-## Replace Private Stream Source (SoundCloud)
-
-The private stream now uses an embedded SoundCloud playlist.
-
-1. Open `index.html`.
-2. In the **Private Stream** section, update the SoundCloud playlist URL in the iframe `src` query param (`url=`).
-3. Keep the URL encoded format used in the existing embed.
-
-## Replace YouTube Links
-
-In `index.html`, find the **Video** section and replace each `iframe src` URL with your desired embed links.
-
-## Publish on GitHub Pages
-
-1. Push this repository to GitHub.
-2. In GitHub: **Settings → Pages**.
-3. Under **Build and deployment**, choose:
-   - **Source**: Deploy from a branch
-   - **Branch**: `main` (or your preferred branch), folder `/ (root)`
-4. Save and wait for deployment.
-5. GitHub will provide your Pages URL.
+## Publish
+Push to GitHub and enable GitHub Pages from branch root.

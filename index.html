@@ -4,122 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cheap Coffins — I AM MARA | Private EPK</title>
-    <meta
-      name="description"
-      content="Private advance EPK stream for Cheap Coffins' album I AM MARA."
-    />
+    <meta name="description" content="Private EPK for Cheap Coffins — I AM MARA" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!--
-      ============================================
-      PRIVATE PASSWORD GATE (VISIBLE ON FIRST LOAD)
-      ============================================
-    -->
-    <div id="passwordGate" class="password-gate" aria-hidden="false">
-      <div class="gate-card">
+    <div id="passwordGate" class="password-gate">
+      <form id="passwordForm" class="gate-card">
         <p class="eyebrow">Private Access</p>
         <h1>Cheap Coffins — I AM MARA</h1>
-        <p>
-          This page contains a private advance EPK stream intended for labels,
-          media, promoters, and industry contacts.
-        </p>
-        <form id="passwordForm" class="gate-form" novalidate>
-          <label for="passwordInput">Enter Password</label>
-          <input
-            id="passwordInput"
-            name="password"
-            type="password"
-            autocomplete="current-password"
-            required
-          />
-          <button type="submit">Enter</button>
-          <p id="passwordMessage" class="gate-message" aria-live="polite"></p>
-        </form>
-      </div>
+        <p>Enter password to access the private EPK preview.</p>
+        <label for="passwordInput">Password</label>
+        <input id="passwordInput" type="password" autocomplete="current-password" required />
+        <button type="submit">Enter</button>
+        <p id="passwordMessage" class="message" aria-live="polite"></p>
+      </form>
     </div>
 
-    <main id="siteContent" class="site-content hidden" aria-hidden="true">
-      <!-- ============================================
-           HERO / ALBUM HEADER
-           EDITABLE: band name, album title, album blurb, image path
-      ============================================= -->
-      <header class="hero section">
-        <div class="hero-grid">
-          <div class="hero-copy">
-            <!-- EDIT BAND NAME HERE -->
-            <p class="eyebrow">Cheap Coffins</p>
-            <!-- EDIT ALBUM TITLE HERE -->
-            <h1>I AM MARA</h1>
-            <!-- EDIT ALBUM BLURB HERE -->
-            <p class="lead">
-              I AM MARA is a focused, nine-track full-length moving through
-              post-punk tension, dark rock dynamics, and art-rock detail. This
-              private advance stream is shared for label, press, and promoter
-              consideration.
-            </p>
-            <p class="private-note">Private stream / advance preview</p>
-          </div>
-          <figure class="cover-wrap">
-            <!-- EDIT IMAGE PATH HERE -->
-            <img src="images/cover.jpg" alt="I AM MARA cover artwork" />
-          </figure>
-        </div>
+    <main id="siteContent" class="hidden">
+      <header class="section hero">
+        <p class="eyebrow">Cheap Coffins</p>
+        <h1>I AM MARA</h1>
+        <p class="muted">Private streaming preview for labels, media, and collaborators.</p>
       </header>
 
-      <!-- ============================================
-           ALBUM OVERVIEW
-           EDITABLE: overview metadata and key selling points
-      ============================================= -->
-      <section class="section" id="overview">
-        <div class="section-heading">
-          <p class="eyebrow">Album Overview</p>
-          <h2>Project Snapshot</h2>
-        </div>
-        <div class="overview-grid">
-          <article class="card">
-            <h3>Short Description</h3>
-            <p>
-              A cohesive, emotionally restrained record with a dark melodic core
-              and a clear artistic identity built for critical and niche audience
-              discovery.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Metadata</h3>
-            <ul class="meta-list">
-              <!-- EDIT OVERVIEW METADATA HERE -->
-              <li><span>Genre / Style</span><span>Post-punk / Dark Rock / Art Rock</span></li>
-              <li><span>Location</span><span>Placeholder City, Country</span></li>
-              <li><span>Release Status</span><span>Advance private stream (pre-release)</span></li>
-              <li><span>RIYL / FFO</span><span>Interpol, Preoccupations, The Cure (darker era)</span></li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Key Selling Points</h3>
-            <ul>
-              <!-- EDIT KEY SELLING POINTS HERE -->
-              <li>Nine-track arc with strong sequencing and consistent tone.</li>
-              <li>Clear crossover potential between alternative and dark post-punk audiences.</li>
-              <li>Recording approach balances cinematic atmosphere with direct rhythm energy.</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <!-- ============================================
-           PRIVATE STREAM
-           EDITABLE: SoundCloud playlist URL
-      ============================================= -->
       <section class="section" id="stream">
-        <div class="section-heading">
-          <p class="eyebrow">Private Stream</p>
-          <h2>Private Album Stream — I AM MARA</h2>
-          <p class="stream-note">Private streaming preview for labels, media, and collaborators.</p>
-        </div>
-
-        <div class="soundcloud-wrap card">
-          <!-- EDIT SOUNDCLOUD PLAYLIST URL HERE (inside iframe src query param `url=`) -->
+        <h2>Private Album Stream — I AM MARA</h2>
+        <!-- Replace playlist URL in iframe src if needed -->
+        <div class="embed-wrap">
           <iframe
             width="100%"
             height="450"
@@ -131,129 +42,9 @@
         </div>
       </section>
 
-      <!-- ============================================
-           VIDEO SECTION
-           EDITABLE: YouTube embed links
-      ============================================= -->
-      <section class="section" id="video">
-        <div class="section-heading">
-          <p class="eyebrow">Video</p>
-          <h2>Private Visual Assets</h2>
-        </div>
-        <div class="video-grid">
-          <div class="video-frame">
-            <!-- EDIT YOUTUBE LINK HERE -->
-            <iframe
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              title="Cheap Coffins private video 01"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="video-frame">
-            <!-- EDIT YOUTUBE LINK HERE -->
-            <iframe
-              src="https://www.youtube.com/embed/aqz-KE-bpKQ"
-              title="Cheap Coffins private video 02"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================
-           BAND / PROJECT BACKGROUND
-           EDITABLE: bio copy
-      ============================================= -->
-      <section class="section" id="background">
-        <div class="section-heading">
-          <p class="eyebrow">Band / Project Background</p>
-          <h2>Context</h2>
-        </div>
-        <article class="card prose">
-          <p>
-            Cheap Coffins is a project centered on disciplined arrangement,
-            tension-first songwriting, and a darker melodic palette. I AM MARA
-            expands that approach into a full-length sequence designed as one
-            sustained statement rather than a disconnected singles collection.
-          </p>
-          <p>
-            The record emphasizes tonal cohesion, vocal restraint, and rhythm
-            architecture intended to translate effectively across both live and
-            editorial contexts. The current private rollout is intended for
-            conversations around strategic release support and media placement.
-          </p>
-        </article>
-      </section>
-
-      <!-- ============================================
-           PRESS / RIYL / POSITIONING
-           EDITABLE: RIYL, strengths, sonic identity, live/recording context, prior traction
-      ============================================= -->
-      <section class="section" id="press">
-        <div class="section-heading">
-          <p class="eyebrow">Press / Positioning</p>
-          <h2>Evaluation Notes</h2>
-        </div>
-        <div class="overview-grid">
-          <article class="card">
-            <h3>RIYL / FFO</h3>
-            <p>
-              For listeners of modern post-punk and dark alternative with a
-              melodic center and tightly controlled dynamics.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Release Strengths</h3>
-            <ul>
-              <li>Distinct tonal identity from track one through closing sequence.</li>
-              <li>Mix-ready dynamic range for both headphones and live-room translation.</li>
-              <li>Balanced hooks without compromising genre credibility.</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Sonic Identity</h3>
-            <p>
-              Angular guitars, deliberate low-end movement, and spacious
-              vocal presentation with an emphasis on mood continuity.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Live / Recording Context</h3>
-            <p>
-              Developed from live-tested arrangements and refined in studio to
-              preserve urgency while improving structural precision.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Prior Traction / Notable Details</h3>
-            <p>
-              Add previous release milestones, notable support slots, press
-              quotes, playlisting, and key social performance metrics here.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <!-- ============================================
-           CONTACT
-           EDITABLE: contact info, socials, management/booking/label
-      ============================================= -->
-      <section class="section" id="contact">
-        <div class="section-heading">
-          <p class="eyebrow">Contact</p>
-          <h2>Direct Industry Contact</h2>
-        </div>
-        <article class="card contact-card">
-          <!-- EDIT CONTACT INFO HERE -->
-          <p><strong>Contact:</strong> Name Placeholder</p>
-          <p><strong>Email:</strong> name@domain.com</p>
-          <p><strong>Socials:</strong> instagram.com/cheapcoffins • x.com/cheapcoffins</p>
-          <p><strong>Management / Booking / Label:</strong> Placeholder details</p>
-        </article>
+      <section class="section">
+        <h2>Contact</h2>
+        <p class="muted">contact@placeholder.com</p>
       </section>
     </main>
 
