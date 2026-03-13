@@ -122,6 +122,17 @@ a {
   padding: clamp(24px, 4vw, 36px) var(--page-gutter) clamp(56px, 7vw, 80px);
 }
 
+.page-header-mark {
+  max-width: var(--max-width);
+  margin: 0 auto clamp(12px, 2vw, 22px);
+  padding: 0 0 clamp(8px, 1.5vw, 12px);
+}
+
+.page-header-mark img {
+  width: min(100%, 420px);
+  height: auto;
+}
+
 .section {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -215,10 +226,12 @@ a {
   min-width: 0;
 }
 
-.overview-grid .card:nth-child(1),
-.overview-grid .card:nth-child(2),
-.overview-grid .card:nth-child(3) {
+.overview-grid .card {
   grid-column: span 4;
+}
+
+#overview .overview-grid .card {
+  grid-column: span 6;
 }
 
 .meta-list {
