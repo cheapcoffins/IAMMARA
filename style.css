@@ -350,6 +350,14 @@ a {
   align-items: stretch;
 }
 
+.performance-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.9fr);
+  gap: clamp(14px, 2vw, 18px);
+  align-items: stretch;
+  margin-bottom: clamp(12px, 2vw, 16px);
+}
+
 .background-image {
   margin: 0;
   padding: 0;
@@ -365,7 +373,7 @@ a {
 }
 
 .performance-image {
-  margin: 0 0 clamp(12px, 2vw, 16px);
+  margin: 0;
   padding: 0;
   overflow: hidden;
 }
@@ -373,7 +381,9 @@ a {
 .performance-image img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  min-height: 100%;
+  object-fit: cover;
 }
 
 .photo-credit {
@@ -420,6 +430,10 @@ a {
   }
 
   .background-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .performance-grid {
     grid-template-columns: 1fr;
   }
 

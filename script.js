@@ -4,11 +4,11 @@
 */
 
 // ====================================================
-// EDIT PASSWORD HERE:
-// Replace the value below with your own private password.
+// EDIT PASSWORDS HERE:
+// Replace the values below with your own private passwords.
 // This is casual protection only (not secure authentication).
 // ====================================================
-const EPK_PASSWORD = "cheapcoffins-private";
+const EPK_PASSWORDS = ["cave", "face", "catharsis"];
 
 const SESSION_KEY = "cheapcoffins-epk-authenticated";
 
@@ -44,7 +44,7 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   const entered = input.value.trim();
 
-  if (entered === EPK_PASSWORD) {
+  if (EPK_PASSWORDS.includes(entered)) {
     sessionStorage.setItem(SESSION_KEY, "true");
     message.textContent = "";
     unlockSite();
