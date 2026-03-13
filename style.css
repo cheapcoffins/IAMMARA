@@ -126,10 +126,12 @@ a {
   max-width: var(--max-width);
   margin: 0 auto clamp(12px, 2vw, 22px);
   padding: 0 0 clamp(8px, 1.5vw, 12px);
+  display: flex;
+  justify-content: center;
 }
 
 .page-header-mark img {
-  width: min(100%, 420px);
+  width: min(100%, 680px);
   height: auto;
 }
 
@@ -408,6 +410,10 @@ a {
 
   .video-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .page-header-mark img {
+    width: min(100%, 520px);
   }
 }
 
