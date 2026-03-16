@@ -159,6 +159,20 @@ a {
   color: var(--muted);
 }
 
+.text-link {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: rgba(232, 232, 238, 0.45);
+  text-underline-offset: 0.18em;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.text-link:hover,
+.text-link:focus-visible {
+  color: #ffffff;
+  text-decoration-color: rgba(255, 255, 255, 0.9);
+}
+
 .soundcloud-wrap {
   padding: 0;
   overflow: hidden;
@@ -170,6 +184,22 @@ a {
   max-width: 100%;
   min-height: 520px;
   border: 0;
+}
+
+.download-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(12px, 2vw, 16px);
+  margin-top: clamp(14px, 2vw, 18px);
+}
+
+.download-card h3 {
+  margin: 0 0 10px;
+}
+
+.download-card p:not(.eyebrow) {
+  margin: 0 0 14px;
+  color: #d3d3dd;
 }
 
 .hero-grid {
@@ -440,6 +470,10 @@ a {
   }
 
   .performance-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .download-grid {
     grid-template-columns: 1fr;
   }
 
