@@ -263,11 +263,11 @@ a {
 }
 
 #overview .overview-grid .card:first-child {
-  grid-column: span 4;
+  grid-column: span 5;
 }
 
 #overview .overview-grid .card:last-child {
-  grid-column: span 8;
+  grid-column: span 7;
 }
 
 .meta-list {
