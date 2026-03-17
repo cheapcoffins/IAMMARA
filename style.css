@@ -262,8 +262,12 @@ a {
   grid-column: span 4;
 }
 
-#overview .overview-grid .card {
-  grid-column: span 6;
+#overview .overview-grid .card:first-child {
+  grid-column: span 4;
+}
+
+#overview .overview-grid .card:last-child {
+  grid-column: span 8;
 }
 
 .meta-list {
